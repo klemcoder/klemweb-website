@@ -1,0 +1,6 @@
+@use '../components/button'as *;
+
+button {
+    margin: 4rem;
+    @include btn(1.2rem);
+}

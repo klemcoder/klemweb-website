@@ -25,3 +25,11 @@ body {
 .apply-link {
     @include btn(1.2rem);
 }
+
+.faq {
+    width      : 100%;
+    display    : grid;
+    margin-top : 2rem;
+    gap        : 1.5rem;
+    place-items: center;
+}

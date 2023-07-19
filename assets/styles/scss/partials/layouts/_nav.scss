@@ -7,13 +7,19 @@ nav {
     align-items    : center;
     height         : 3.5rem;
     padding        : calc($pad / 1.2) calc($pad /1.6);
-    box-shadow     : .1rem .1rem .9rem lighten($color: $shadow, $amount: 45);
     position       : sticky;
     top            : 0;
-    background     : #fff;
+    background     : none;
+    z-index        : 1000;
 
     @media screen and (min-width: $md) {
         padding: calc($pad / 1.2) $pad;
+    }
+
+    &.bg {
+        background: #fff;
+        box-shadow: .1rem .1rem .9rem lighten($color: $shadow, $amount: 45);
+
     }
 
     .toggler {
@@ -65,6 +71,69 @@ nav {
 
         li {
             width: 100%;
+
+            &.dropdown {
+                position: relative;
+
+                &:hover {
+                    .dropdown-menu {
+                        @keyframes in {
+                            from {
+                                transform: translateY(10%);
+                                opacity  : .5;
+                            }
+
+                            to {
+                                transform: translateY(0);
+                                opacity  : 1;
+                            }
+                        }
+
+                        @media screen and (min-width: $md) {
+                            display  : flex;
+                            animation: in .5s;
+                        }
+                    }
+                }
+
+                .dropdown-menu {
+                    position       : absolute;
+                    top            : 100%;
+                    display        : none;
+                    border         : none;
+                    justify-content: space-between;
+                    width          : 27rem;
+                    padding        : calc($pad / 2);
+                    left           : -200%;
+                    border-radius  : 1rem;
+                    box-shadow     : 0 2px 2px lighten($shadow, 50);
+
+                    div {
+                        display        : flex;
+                        flex-direction : column;
+                        justify-content: start;
+                        align-items    : center;
+
+                        h4 {
+                            align-self : start;
+                            font-weight: 600;
+                        }
+
+                        ul {
+                            display     : grid;
+                            padding-left: 1rem;
+
+                            li {
+                                a {
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+            }
 
             @media screen and (min-width: $md) {
                 width: initial;

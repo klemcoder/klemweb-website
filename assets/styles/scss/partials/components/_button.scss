@@ -1,13 +1,14 @@
 @use '../base/var'as *;
 
 @mixin btn($size) {
-    background   : linear-gradient(to top right, $primaryColor, lighten($primaryColor, 20));
-    padding      : 0.5rem .8rem;
-    border       : none;
-    border-radius: 50px;
-    color        : $secondaryColor;
-    font-size    : $size;
-    box-shadow   : 0 .2rem .1rem $shadow;
+    background     : linear-gradient(to top right, $primaryColor, lighten($primaryColor, 20));
+    padding        : 0.5rem .8rem;
+    border         : none;
+    border-radius  : 50px;
+    color          : $secondaryColor;
+    font-size      : $size;
+    box-shadow     : 0 .2rem .1rem $shadow;
+    text-decoration: none;
 
     &:hover {
         color     : lighten($color: $secondaryColor, $amount: 10);

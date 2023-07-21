@@ -1,27 +1,15 @@
-<<<<<<< HEAD
 @use "./var" as *;
+@use "../components/button" as *;
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-=======
-@use './var'as *;
-@use '../components/button'as *;
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-* {
-    margin         : 0;
-    padding        : 0;
-    box-sizing     : border-box;
     text-decoration: none !important;
-    list-style     : none;
->>>>>>> 8945ba44b22ece74c999f6f5216d93e11734f812
+    list-style: none;
     scroll-behavior: smooth;
-    font-family    : 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
 
     &::selection {
         background: $primaryColor;
@@ -31,9 +19,6 @@
 
 body {
     min-height: 100vh;
-<<<<<<< HEAD
-}
-=======
     background: $accent;
 }
 
@@ -42,10 +27,9 @@ body {
 }
 
 .faq {
-    width      : 100%;
-    display    : grid;
-    margin-top : 2rem;
-    gap        : 1.5rem;
+    width: 100%;
+    display: grid;
+    margin-top: 2rem;
+    gap: 1.5rem;
     place-items: center;
 }
->>>>>>> 8945ba44b22ece74c999f6f5216d93e11734f812

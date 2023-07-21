@@ -1,58 +1,58 @@
-@use '../base/var'as *;
+@use "../base/var" as *;
 
 footer {
-    width         : 100%;
-    display       : grid;
-    place-items   : center;
-    background    : #000;
-    padding       : calc($pad / 1.7);
-    margin-top    : 3rem;
-    gap           : 2rem;
-    padding-bottom: .5rem !important;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    // background: $primaryColor-variant;
+    background: #000;
+    padding: calc($pad / 1.7);
+    margin-top: 3rem;
+    gap: 2rem;
+    padding-bottom: 0.5rem !important;
+    // position: fixed;
+    // bottom: 0;
+    // z-index: 1;
 
     @media screen and (min-width: $md) {
         padding: $pad;
     }
 
     h3 {
-        color    : $secondaryColor;
+        color: $secondaryColor;
         font-size: 1.4rem;
     }
 
     .wrapper {
-        width          : 100%;
-        display        : flex;
-        flex-wrap      : wrap;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-        align-items    : start;
+        align-items: start;
 
         .sec {
             img {
                 width: 14rem;
-
             }
 
-
-
-
             p {
-                width     : 100%;
-                max-width : 20rem;
+                width: 100%;
+                max-width: 20rem;
                 text-align: justify;
-                color     : $accent;
+                color: $accent;
             }
 
             ul {
                 padding-left: 0;
 
                 &.apply {
-                    display    : grid;
+                    display: grid;
                     place-items: center;
                 }
 
                 li {
                     a {
-                        color    : $accent;
+                        color: $accent;
                         font-size: 1.1rem;
                         @extend %transition;
 
@@ -63,40 +63,38 @@ footer {
                 }
             }
         }
-
     }
 
     .soc {
-        display        : flex;
+        display: flex;
         justify-content: end;
-        align-items    : end;
+        align-items: end;
 
         .socials {
-            display        : flex;
-            width          : 100%;
+            display: flex;
+            width: 100%;
             justify-content: start;
-            align-items    : start;
-            gap            : 1rem;
-            justify-self   : start;
+            align-items: start;
+            gap: 1rem;
+            justify-self: start;
 
             a {
                 font-size: 1.7rem;
-                color    : $secondaryColor;
+                color: $secondaryColor;
                 @extend %transition;
 
                 &:hover {
                     color: lighten($color: $primaryColor, $amount: 10);
                 }
-
             }
         }
     }
 }
 
 .copyright {
-    margin    : 0 !important;
-    width     : 100%;
-    color     : $secondaryColor;
-    padding   : calc($pad / 3) $pad;
+    margin: 0 !important;
+    width: 100%;
+    color: $secondaryColor;
+    padding: calc($pad / 3) $pad;
     background: $primaryColor;
 }
